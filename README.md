@@ -1,32 +1,41 @@
 🚀 How to Open & Run This Project Locally
 Follow these steps to run the project on your machine.
+
 ✅ Prerequisites
+
 Make sure you have the following installed:
+
 Node.js (v18 or later recommended)
 👉 https://nodejs.org/
 npm (comes with Node.js)
 Git
+
 Check versions:
 Copy code
-Bash***
+
 node -v
 npm -v
 git --version
+
 📥 1. Clone the Repository
 Copy code
-Bash
+
 git clone https://github.com/normantitus123/riead-portfolio.git
 Copy code
-Bash
+
 cd riead-portfolio
+
 📦 2. Install Dependencies
 Copy code
-Bash
+
 npm install
+
 This will install all required packages from package.json.
+
 ▶️ 3. Start the Development Server
+
 Copy code
-Bash
+
 npm run dev
 You should see output like:
 Copy code
@@ -52,6 +61,7 @@ Copy code
 Bash
 npm run build
 Preview production build:
+
 Copy code
-Bash
+
 npm run preview
