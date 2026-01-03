@@ -37,31 +37,36 @@ This will install all required packages from package.json.
 Copy code
 
 npm run dev
+
 You should see output like:
 Copy code
-Text
+
 VITE v7.x.x ready in xxx ms
 Local: http://localhost:5173/
+
 🌐 4. Open in Browser
 Open your browser and go to:
 👉 http://localhost:5173/
+
 The site will reload automatically when you edit files (Hot Module Reload).
+
 🛠️ Project Structure (Quick Overview)
 Copy code
-Text
+
 src/
 ├── components/     # Reusable UI components
 ├── sections/       # Page sections (Home, About, Skills, etc.)
 ├── assets/         # Images & static files
 ├── index.css       # Global styles (Tailwind)
 ├── main.jsx        # App entry point
+
 🧹 Optional Commands
 Build for production:
 Copy code
-Bash
-npm run build
-Preview production build:
 
+npm run build
+
+Preview production build:
 Copy code
 
 npm run preview
