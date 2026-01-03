@@ -1,16 +1,57 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🚀 How to Open & Run This Project Locally
+Follow these steps to run the project on your machine.
+✅ Prerequisites
+Make sure you have the following installed:
+Node.js (v18 or later recommended)
+👉 https://nodejs.org/
+npm (comes with Node.js)
+Git
+Check versions:
+Copy code
+Bash***
+node -v
+npm -v
+git --version
+📥 1. Clone the Repository
+Copy code
+Bash
+git clone https://github.com/normantitus123/riead-portfolio.git
+Copy code
+Bash
+cd riead-portfolio
+📦 2. Install Dependencies
+Copy code
+Bash
+npm install
+This will install all required packages from package.json.
+▶️ 3. Start the Development Server
+Copy code
+Bash
+npm run dev
+You should see output like:
+Copy code
+Text
+VITE v7.x.x ready in xxx ms
+Local: http://localhost:5173/
+🌐 4. Open in Browser
+Open your browser and go to:
+👉 http://localhost:5173/
+The site will reload automatically when you edit files (Hot Module Reload).
+🛠️ Project Structure (Quick Overview)
+Copy code
+Text
+src/
+├── components/     # Reusable UI components
+├── sections/       # Page sections (Home, About, Skills, etc.)
+├── assets/         # Images & static files
+├── index.css       # Global styles (Tailwind)
+├── main.jsx        # App entry point
+🧹 Optional Commands
+Build for production:
+Copy code
+Bash
+npm run build
+Preview production build:
+Copy code
+Bash
+npm run preview
