@@ -1,91 +1,137 @@
+import SectionHeader from "../components/SectionHeader";
+import SectionLayout from "../components/SectionLayout";
+
 export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 bg-slate-900 text-white"
+      className="relative min-h-screen text-white scroll-mt-[96px]"
+      style={{
+        backgroundImage:
+          "linear-gradient(to bottom, rgba(11,29,58,0.85), rgba(7,20,43,0.9)), url('/contact-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-        
-        {/* Left content */}
-        <div>
-          {/* Logo */}
-          <div className="mb-6 text-xl font-semibold text-teal-400">
-            RIEAD
+      <SectionLayout>
+        {/* Section Title */}
+        <SectionHeader title="My" highlight="Contact" />
+
+        {/* MAIN CONTENT */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mt-24">
+
+          {/* LEFT INFO */}
+          <div className="max-w-[460px] space-y-8">
+            {/* Logo */}
+            <div className="text-2xl font-bold tracking-wide">
+              RIEAD
+            </div>
+
+            {/* Description */}
+            <p className="text-gray-300 leading-relaxed">
+              I am professional Web designer. I have designed more than 50 web
+              templates for my clients. You can hire me for design your personal,
+              business or other website template. You can trust me. I completed
+              your work with full satisfaction.
+            </p>
+
+            {/* Social / Contact Icons */}
+            <div className="flex gap-6 text-xl text-white">
+              <span>📞</span>
+              <span>✉️</span>
+              <span>in</span>
+              <span>📍</span>
+              <span>f</span>
+            </div>
           </div>
 
-          <p className="text-gray-400 text-sm leading-relaxed mb-8 max-w-sm">
-            I’m a professional web developer. I have developed many
-            websites and completed projects with full client satisfaction.
-          </p>
-
-          {/* Social icons */}
-          <div className="flex gap-4 text-gray-400">
-            {["🌐", "✉️", "in", "f"].map((icon, i) => (
-              <div
-                key={i}
-                className="w-9 h-9 flex items-center justify-center border border-slate-700 rounded-full hover:border-teal-400 hover:text-teal-400 transition cursor-pointer"
-              >
-                {icon}
-              </div>
-            ))}
-          </div>
+          {/* RIGHT FORM */}
+          <ContactForm />
         </div>
-
-        {/* Right form */}
-        <div>
-          <h2 className="text-right text-3xl font-semibold mb-10">
-            Contact <span className="text-teal-400">Me</span>
-          </h2>
-
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            
-            <input
-              type="text"
-              placeholder="First Name"
-              className="bg-slate-800 rounded-md px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-teal-400"
-            />
-
-            <input
-              type="text"
-              placeholder="Last Name"
-              className="bg-slate-800 rounded-md px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-teal-400"
-            />
-
-            <input
-              type="email"
-              placeholder="Email"
-              className="bg-slate-800 rounded-md px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-teal-400"
-            />
-
-            <input
-              type="tel"
-              placeholder="Phone"
-              className="bg-slate-800 rounded-md px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-teal-400"
-            />
-
-            <input
-              type="text"
-              placeholder="Subject"
-              className="md:col-span-2 bg-slate-800 rounded-md px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-teal-400"
-            />
-
-            <textarea
-              placeholder="Message"
-              rows="4"
-              className="md:col-span-2 bg-slate-800 rounded-md px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-teal-400 resize-none"
-            />
-
-            <button
-              type="submit"
-              className="w-fit mt-4 px-8 py-3 bg-teal-400 text-slate-900 rounded-md text-sm font-medium hover:bg-teal-300 transition"
-            >
-              Submit
-            </button>
-
-          </form>
-        </div>
-
-      </div>
+      </SectionLayout>
     </section>
+  );
+}
+
+/* ---------------- COMPONENTS ---------------- */
+
+function ContactForm() {
+  return (
+    <form className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
+
+      <Input placeholder="First Name" />
+      <Input placeholder="Last Name" />
+
+      <Input placeholder="Phone" />
+      <Input placeholder="Subject" />
+
+      <div className="md:col-span-2">
+        <Input placeholder="Email" />
+      </div>
+
+      <div className="md:col-span-2">
+        <Textarea placeholder="Message" />
+      </div>
+
+      {/* SUBMIT */}
+      <div className="md:col-span-2 flex justify-center mt-[24px]">
+        <button
+          className="
+            w-[288px] h-[35px]
+            rounded-[20px]
+            bg-[#00EEFF]
+            text-[#323946]
+            font-bold
+          "
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  );
+}
+
+function Input({ placeholder }) {
+  return (
+    <input
+      placeholder={placeholder}
+      className="
+        h-[53px]
+        rounded-[8px]
+        bg-[rgba(31,36,45,0.8)]
+        px-[10px]
+        text-[14px]
+        leading-[33px]
+        font-medium
+        text-white
+        outline-none
+        placeholder:text-[14px]
+        placeholder:font-medium
+        placeholder:text-gray-300
+      "
+    />
+  );
+}
+
+function Textarea({ placeholder }) {
+  return (
+    <textarea
+      placeholder={placeholder}
+      className="
+        h-[117px]
+        rounded-[8px]
+        bg-[rgba(31,36,45,0.8)]
+        px-[16px] py-[12px]
+        text-[14px]
+        font-normal
+        text-white
+        outline-none
+        resize-none
+        placeholder:text-[14px]
+        placeholder:font-normal
+        placeholder:text-gray-300
+      "
+    />
   );
 }

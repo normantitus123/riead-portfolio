@@ -1,43 +1,58 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-200 mt-24">
-      <div className="max-w-7xl mx-auto px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4">
-        
-        {/* Left */}
-        <p className="text-sm text-gray-500">
-          © {new Date().getFullYear()} Norman. All rights reserved.
-        </p>
+    <footer className="relative w-full h-[110px] bg-transparent mt-24">
 
-        {/* Right */}
-        <div className="flex gap-6 text-sm">
-          <a
-            href="https://github.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-gray-500 hover:text-blue-600 transition"
-          >
-            GitHub
-          </a>
+      {/* COPYRIGHT TEXT */}
+      <p
+        className="
+          absolute
+          left-[359px]
+          bottom-[24px]
+          w-[380px]
+          h-[24px]
+          text-[16px]
+          leading-[24px]
+          font-semibold
+          text-white
+        "
+        style={{ fontFamily: "Montserrat" }}
+      >
+         Copywrite 2024 All Rights Reserved By RIEAD.
+      </p>
 
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="text-gray-500 hover:text-blue-600 transition"
-          >
-            LinkedIn
-          </a>
+      {/* SCROLL TO TOP BUTTON */}
+      <button
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="
+          absolute
+          right-[60px]
+          bottom-[16px]
+          w-[58px]
+          h-[58px]
+          border-[3px]
+          border-[#00EEFF]
+          rounded-[5px]
+          flex
+          items-center
+          justify-center
+          hover:bg-[#00EEFF]
+          transition
+          group
+        "
+      >
+        {/* ARROW ICON */}
+        <img
+          src="/up-arrow-alt-solid-48.png"
+          alt="Scroll to top"
+          className="
+            w-[48px]
+            h-[48px]
+            group-hover:invert
+            transition
+          "
+        />
+      </button>
 
-          <a
-            href="mailto:your@email.com"
-            className="text-gray-500 hover:text-blue-600 transition"
-          >
-            Email
-          </a>
-        </div>
-
-      </div>
     </footer>
   );
 }
-

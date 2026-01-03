@@ -1,81 +1,76 @@
+import { Facebook, Linkedin, Mail, Github } from "lucide-react";
+import SectionLayout from "../components/SectionLayout";
+
 export default function Home() {
   return (
     <section
       id="home"
-      className="min-h-screen bg-slate-900 text-white pt-20"
+      className="relative min-h-screen text-white"
+      style={{
+        backgroundImage:
+          "linear-gradient(to bottom, rgba(11,29,58,0.85), rgba(7,20,43,0.9)), url('/home-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        
-        {/* Left content */}
-        <div>
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-4">
-            MD RIEAD MIA
-          </h1>
+      <SectionLayout>
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-[72px]">
 
-          <h2 className="text-xl md:text-2xl mb-6">
-            And I’m a{" "}
-            <span className="text-teal-400 font-semibold">
-              Developer
-            </span>
-          </h2>
+          {/* LEFT */}
+          <div className="max-w-[520px]">
+            <h1 className="text-[52px] leading-[63px] font-semibold">
+              MD RIEAD MIA
+            </h1>
 
-          <p className="text-gray-300 max-w-md mb-8 text-sm leading-relaxed">
-            I’m a professional web developer with strong skills in HTML,
-            CSS, JavaScript and React. I have completed many projects
-            successfully with 100% client satisfaction.
-          </p>
+            <h2 className="text-[32px] leading-[39px] font-semibold mt-2">
+              And I&apos;m a <span className="text-teal-400">Developer</span>
+            </h2>
 
-          {/* Buttons */}
-          <div className="flex items-center gap-4 mb-8">
-            <a
-              href="#portfolio"
-              className="px-6 py-3 bg-teal-400 text-slate-900 rounded-md text-sm font-medium hover:bg-teal-300 transition"
-            >
-              Download CV
-            </a>
+            <p className="mt-6 text-[16px] leading-[26px] font-semibold">
+              I&apos;m professional web developer with strong skill in HTML, 
+              CSS, JavaScript, Tailwind, JQuery etc. I have working in this 
+              field almost 3 years and all projects are complited successfully 
+              with 100% client satisfiction.
+            </p>
 
-            <a
-              href="#contact"
-              className="px-6 py-3 border border-teal-400 text-teal-400 rounded-md text-sm font-medium hover:bg-teal-400 hover:text-slate-900 transition"
-            >
-              Contact Me
-            </a>
-          </div>
-
-          {/* Social icons (placeholders) */}
-          <div className="flex gap-4">
-            {["F", "L", "G", "T"].map((item, i) => (
-              <div
-                key={i}
-                className="w-9 h-9 flex items-center justify-center border border-teal-400 rounded-full text-sm text-teal-400 hover:bg-teal-400 hover:text-slate-900 transition cursor-pointer"
-              >
-                {item}
+            <div className="mt-8 ">
+              <div className="flex gap-4 h-[40px] items-center mb-[32px]">
+                {[Facebook, Linkedin, Mail, Github].map((Icon, i) => (
+                  <a
+                    key={i}
+                    className="w-10 h-10 rounded-full border-2 border-teal-400
+                               flex items-center justify-center text-teal-400
+                               hover:bg-teal-400 hover:text-slate-900 transition"
+                  >
+                    <Icon size={18} />
+                  </a>
+                ))}
               </div>
-            ))}
+
+              <div className="flex gap-6">
+                <a className="w-[172px] h-[38px] rounded-full bg-teal-400
+                              flex items-center justify-center text-slate-900 font-semibold">
+                  Download CV
+                </a>
+                <a className="w-[139px] h-[38px] rounded-full bg-teal-400
+                              flex items-center justify-center text-slate-900 font-semibold">
+                  Portfolio
+                </a>
+              </div>
+            </div>
           </div>
+
+          {/* RIGHT */}
+          <div className="flex justify-center">
+            <img
+              src="/profile.png"
+              alt="MD Riead Mia"
+              className="w-[500px] h-[608px] object-cover"
+            />
+          </div>
+
         </div>
-
-{/* Right image */}
-<div className="flex justify-center md:justify-end">
-  <div className="relative w-72 h-80">
-
-    {/* Glow */}
-    <div className="absolute inset-0 bg-teal-400 blur-3xl opacity-30" />
-
-    {/* Hexagon image */}
-    <div className="relative w-full h-full hexagon overflow-hidden bg-slate-800">
-      <img
-        src="/profile.png"
-        alt="Profile"
-        className="w-full h-full object-cover"
-      />
-    </div>
-
-  </div>
-</div>
-
-
-      </div>
+      </SectionLayout>
     </section>
   );
 }

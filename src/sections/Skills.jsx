@@ -1,70 +1,62 @@
+import SectionHeader from "../components/SectionHeader";
+import SectionLayout from "../components/SectionLayout";
+import SkillTag from "../components/SkillTag";
+
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiReact,
+  SiTailwindcss,
+  SiFigma,
+  SiAdobephotoshop,
+  SiAdobeillustrator,
+} from "react-icons/si";
+
 export default function Skills() {
   const leftSkills = [
-    { name: "Adobe Photoshop", percent: 85 },
-    { name: "React", percent: 60 },
-    { name: "Tailwind CSS", percent: 90 },
-    { name: "HTML5", percent: 90 },
+    { name: "HTML-5", percent: 90, icon: SiHtml5, color: "#E34F26" },
+    { name: "Tailwind CSS", percent: 80, icon: SiTailwindcss, color: "#38BDF8" },
+    { name: "React", percent: 60, icon: SiReact, color: "#61DAFB" },
+    { name: "Adobe Photoshop", percent: 85, icon: SiAdobephotoshop, color: "#31A8FF" },
   ];
 
   const rightSkills = [
-    { name: "Adobe Illustrator", percent: 80 },
-    { name: "Figma", percent: 85 },
-    { name: "JavaScript", percent: 80 },
-    { name: "CSS3", percent: 80 },
+    { name: "CSS-3", percent: 80, icon: SiCss3, color: "#1572B6" },
+    { name: "JavaScript", percent: 60, icon: SiJavascript, color: "#F7DF1E" },
+    { name: "Figma", percent: 90, icon: SiFigma, color: "#F24E1E" },
+    { name: "Adobe Illustrator", percent: 90, icon: SiAdobeillustrator, color: "#FF9A00" },
   ];
 
   return (
     <section
       id="skills"
-      className="py-24 bg-slate-900 text-white"
+      className="relative min-h-screen text-white scroll-mt-[96px]"
+      style={{
+        backgroundImage:
+          "linear-gradient(to bottom, rgba(11,29,58,0.85), rgba(7,20,43,0.9)), url('/skills-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
-      <div className="max-w-7xl mx-auto px-6">
-        
-        {/* Section title */}
-        <h2 className="text-right text-3xl font-semibold mb-16">
-          My <span className="text-teal-400">Skills</span>
-        </h2>
+      <SectionLayout className="pb-[221px]">
+        <SectionHeader title="My" highlight="Skills" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-          
-          {/* Left column */}
-          <div className="space-y-8">
-            {leftSkills.map((skill, index) => (
-              <SkillItem key={index} skill={skill} />
+          <div className="space-y-10">
+            {leftSkills.map((skill, i) => (
+              <SkillTag key={i} {...skill} />
             ))}
           </div>
 
-          {/* Right column */}
-          <div className="space-y-8">
-            {rightSkills.map((skill, index) => (
-              <SkillItem key={index} skill={skill} />
+          <div className="space-y-10">
+            {rightSkills.map((skill, i) => (
+              <SkillTag key={i} {...skill} />
             ))}
           </div>
-
         </div>
-      </div>
+      </SectionLayout>
     </section>
-  );
-}
-
-function SkillItem({ skill }) {
-  return (
-    <div>
-      <div className="flex justify-between items-center mb-2">
-        <span className="text-sm font-medium">
-          {skill.name}
-        </span>
-        <span className="text-sm text-gray-400">
-          {skill.percent}%
-        </span>
-      </div>
-
-      <div className="w-full h-2 bg-slate-700 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-teal-400 rounded-full"
-          style={{ width: `${skill.percent}%` }}
-        />
-      </div>
-    </div>
   );
 }
