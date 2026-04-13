@@ -59,7 +59,7 @@ export default function Home() {
                 </a>
                 <a
                   href="#portfolio"
-                  className="flex h-[42px] w-[139px] items-center justify-center rounded-full border border-[#00EEFF] text-[15px] font-semibold text-[#00EEFF] transition duration-200 hover:bg-[#00EEFF] hover:text-[#1F242D]"
+                  className="flex h-[42px] w-[172px] items-center justify-center rounded-full bg-[#00EEFF] text-[15px] font-semibold text-[#1F242D] shadow-[0_0_18px_rgba(0,238,255,0.28)]"
                 >
                 Portfolio
               </a>
