@@ -1,3 +1,4 @@
+import { useState } from "react";
 import SectionHeader from "../components/SectionHeader";
 import SectionLayout from "../components/SectionLayout";
 import { Globe, Code2, Paintbrush } from "lucide-react";
@@ -44,7 +45,7 @@ export default function Services() {
         <SectionHeader title="My" highlight="Services" />
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[15px] items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
           {services.map((service, index) => (
             <ServiceCard key={index} service={service} />
           ))}
@@ -56,53 +57,61 @@ export default function Services() {
 
 function ServiceCard({ service }) {
   const Icon = service.icon;
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <div
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
       className="
-        w-[385px] h-[484px]
-        bg-[rgba(31,36,45,0.8)]
+        w-[350px]
+        h-[500px]
+        bg-[rgba(31,36,45,0.92)]
+        border border-cyan-400/20
         rounded-[16px]
-        flex flex-col items-center
-        pt-[56px]
-        px-[18px]
+        px-[22px]
+        pt-[32px]
+        pb-[28px]
+        text-center
+        grid
+        justify-items-center
+        gap-y-[18px]
       "
       style={{
-        outline: service.active ? "2px solid #00EEFF" : "none",
+        outline: isActive ? "2px solid #00EEFF" : "none",
       }}
     >
-      {/* ICON */}
-      <div className="mb-[28px]">
-        <Icon size={48} className="text-teal-400" />
-      </div>
+      <div className="h-full grid justify-items-center gap-y-[18px]">
+        <div className="h-[32px]" />
+          <div className="absolute w-[94px] h-[94px]">
+           <Icon className="w-full h-full text-[#00EEFF]" strokeWidth={1.8} />
+         </div>
 
-      {/* TITLE */}
-      <h3 className="text-[26px] leading-[36px] font-bold text-teal-400 text-center mb-[15px]">
-        {service.title}
-      </h3>
+         <h3 className="text-[21px] leading-[28px] font-semibold text-white">
+           {service.title}
+         </h3>
 
-      {/* DESCRIPTION */}
-      <p className="text-[16px] leading-[24px] font-medium text-white text-center px-[14px]">
-        {service.description}
-      </p>
+         <p className="max-w-[260px] text-[14px] leading-[22px] font-normal text-slate-300">
+           {service.description}
+         </p>
 
-      {/* PUSH BUTTON TO BOTTOM */}
-      <div className="mt-auto pb-[32px]">
-        <button
-          className={`
-            w-[288px] h-[35px]
-            rounded-[20px]
-            text-[16px] font-bold
-            flex items-center justify-center
-            ${
-              service.active
-                ? "bg-[#00EEFF] text-[#323946]"
-                : "bg-white text-[#323946]"
-            }
-          `}
-        >
-          Hire Me
-        </button>
+          <div className="mt-auto pt-[14px]">
+            <button
+              className={`
+                w-[288px] h-[35px]
+                rounded-[20px]
+                text-[16px] font-bold
+                flex items-center justify-center
+                ${
+                  isActive
+                    ? "bg-[#00EEFF] text-[#323946]"
+                    : "bg-white text-[#323946]"
+                }
+              `}
+            >
+              Hire Me
+            </button>
+        </div>
       </div>
     </div>
   );

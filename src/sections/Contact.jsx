@@ -1,6 +1,14 @@
 import SectionHeader from "../components/SectionHeader";
 import SectionLayout from "../components/SectionLayout";
 
+const socialIcons = [
+  { src: "/social media icons/phone-call-solid-48 1.png", alt: "Phone" },
+  { src: "/social media icons/envelope-solid-48 1.png", alt: "Email" },
+  { src: "/social media icons/linkedin-logo-48 1.png", alt: "LinkedIn" },
+  { src: "/social media icons/map-solid-48 1.png", alt: "Location" },
+  { src: "/social media icons/facebook-logo-48 1.png", alt: "Facebook" },
+];
+
 export default function Contact() {
   return (
     <section
@@ -24,9 +32,15 @@ export default function Contact() {
           {/* LEFT INFO */}
           <div className="max-w-[460px] space-y-8">
             {/* Logo */}
-            <div className="text-2xl font-bold tracking-wide">
-              RIEAD
+            <div className="flex items-center">
+              <img
+                src="/logo.png"
+                alt="RIEAD"
+                className="w-[147px] h-[44px] object-contain opacity-100"
+              />
             </div>
+
+            <div className="h-[33px]" />
 
             {/* Description */}
             <p className="text-gray-300 leading-relaxed">
@@ -36,13 +50,18 @@ export default function Contact() {
               your work with full satisfaction.
             </p>
 
+            <div className="h-[65px]" />
+
             {/* Social / Contact Icons */}
-            <div className="flex gap-6 text-xl text-white">
-              <span>📞</span>
-              <span>✉️</span>
-              <span>in</span>
-              <span>📍</span>
-              <span>f</span>
+            <div className="flex gap-12 text-xl text-white">
+              {socialIcons.map((icon) => (
+                <img
+                  key={icon.alt}
+                  src={icon.src}
+                  alt={icon.alt}
+                  className="w-6 h-6 object-contain"
+                  />
+                ))}
             </div>
           </div>
 
@@ -75,14 +94,17 @@ function ContactForm() {
       </div>
 
       {/* SUBMIT */}
-      <div className="md:col-span-2 flex justify-center mt-[24px]">
+      <div className="md:col-span-2 mt-[24px]">
         <button
           className="
-            w-[288px] h-[35px]
+            w-full h-[35px]
             rounded-[20px]
-            bg-[#00EEFF]
-            text-[#323946]
-            font-bold
+            bg-[rgba(31,36,45,0.8)]
+            text-white
+            font-montserrat
+            font-semibold
+            text-[16px]
+            leading-[24px]
           "
         >
           Submit
@@ -96,11 +118,12 @@ function Input({ placeholder }) {
   return (
     <input
       placeholder={placeholder}
+      style={{ paddingLeft: "19px", paddingRight: "19px" }}
       className="
+        w-full
         h-[53px]
         rounded-[8px]
         bg-[rgba(31,36,45,0.8)]
-        px-[10px]
         text-[14px]
         leading-[33px]
         font-medium
@@ -118,11 +141,13 @@ function Textarea({ placeholder }) {
   return (
     <textarea
       placeholder={placeholder}
+      style={{ paddingLeft: "19px", paddingRight: "19px", paddingTop: "12px" }}
       className="
+        w-full
         h-[117px]
         rounded-[8px]
         bg-[rgba(31,36,45,0.8)]
-        px-[16px] py-[12px]
+        
         text-[14px]
         font-normal
         text-white
