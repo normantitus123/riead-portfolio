@@ -1,4 +1,4 @@
-export default function SectionLayout({ children, className = "" }) {
+export default function SectionLayout({ children, className = "", spacerClassName = "h-[221px]" }) {
   return (
     <div className={`flex ${className}`}>
       {/* LEFT SPACER */}
@@ -7,7 +7,7 @@ export default function SectionLayout({ children, className = "" }) {
       {/* CONTENT COLUMN */}
       <div className="max-w-[1100px] w-full pt-24">
         {children}
-        <div className="h-[221px]" />
+        <div className={spacerClassName} />
       </div>
     </div>
   );

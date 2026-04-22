@@ -83,7 +83,7 @@ function ServiceCard({ service }) {
     >
       <div className="h-full grid justify-items-center gap-y-[18px]">
         <div className="h-[32px]" />
-          <div className="absolute w-[94px] h-[94px]">
+          <div className="w-[94px] h-[94px]">
            <Icon className="w-full h-full text-[#00EEFF]" strokeWidth={1.8} />
          </div>
 
