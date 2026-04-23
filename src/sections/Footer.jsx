@@ -5,9 +5,7 @@ export default function Footer() {
     <footer className="relative w-full bg-transparent">
       <SectionLayout className="pt-0" spacerClassName="h-0">
         <div className="flex h-[80px] items-end justify-between  pb-[24px]">
-          <p
-            className="font-montserrat text-[16px] leading-[24px] font-semibold text-white"
-          >
+          <p className="font-montserrat text-[16px] leading-[24px] font-semibold text-white">
             Copywrite 2024 All Rights Reserved By RIEAD.
           </p>
 

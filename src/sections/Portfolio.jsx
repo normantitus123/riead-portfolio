@@ -30,11 +30,7 @@ export default function Portfolio() {
         {/* 2 rows × 3 columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <PortfolioCard
-              key={index}
-              title={project.title}
-              image={project.image}
-            />
+            <PortfolioCard key={index} title={project.title} image={project.image} />
           ))}
         </div>
       </SectionLayout>

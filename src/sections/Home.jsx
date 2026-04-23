@@ -15,8 +15,6 @@ export default function Home() {
     >
       <SectionLayout>
         <div className="grid grid-cols-1 lg:grid-cols-[520px_1fr] items-center gap-[48px] lg:gap-[72px]">
-
-
           {/* LEFT */}
           <div className="max-w-[520px] pt-[24px]">
             <h1 className="text-[44px] leading-[54px] lg:text-[52px] lg:leading-[63px] font-semibold tracking-[0.01em]">
@@ -28,10 +26,9 @@ export default function Home() {
             </h2>
 
             <p className="mt-6 max-w-[500px] text-[16px] leading-[28px] font-medium text-white/85">
-              I&apos;m professional web developer with strong skill in HTML, 
-              CSS, JavaScript, Tailwind, JQuery etc. I have working in this 
-              field almost 3 years and all projects are complited successfully 
-              with 100% client satisfiction.
+              I&apos;m professional web developer with strong skill in HTML, CSS, JavaScript,
+              Tailwind, JQuery etc. I have working in this field almost 3 years and all projects are
+              complited successfully with 100% client satisfiction.
             </p>
 
             <div className="h-[32px]" />
@@ -49,21 +46,21 @@ export default function Home() {
               </div>
 
               <div className="h-[32px]" />
-              
+
               <div className="flex flex-wrap gap-6">
                 <a
                   href="#contact"
-                   className="flex h-[42px] w-[172px] items-center justify-center rounded-full bg-[#00EEFF] text-[15px] font-semibold text-[#1F242D] shadow-[0_0_18px_rgba(0,238,255,0.28)]"
-                  >
-                Download CV
+                  className="flex h-[42px] w-[172px] items-center justify-center rounded-full bg-[#00EEFF] text-[15px] font-semibold text-[#1F242D] shadow-[0_0_18px_rgba(0,238,255,0.28)]"
+                >
+                  Download CV
                 </a>
                 <a
                   href="#portfolio"
                   className="flex h-[42px] w-[172px] items-center justify-center rounded-full bg-[#00EEFF] text-[15px] font-semibold text-[#1F242D] shadow-[0_0_18px_rgba(0,238,255,0.28)]"
                 >
-                Portfolio
-              </a>
-            </div>
+                  Portfolio
+                </a>
+              </div>
             </div>
           </div>
 
@@ -75,7 +72,6 @@ export default function Home() {
               className="w-[320px] sm:w-[380px] lg:w-[500px] h-auto object-contain drop-shadow-[0_0_30px_rgba(0,238,255,0.18)]"
             />
           </div>
-
         </div>
       </SectionLayout>
     </section>

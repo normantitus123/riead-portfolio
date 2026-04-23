@@ -28,7 +28,6 @@ export default function Contact() {
 
         {/* MAIN CONTENT */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 mt-24">
-
           {/* LEFT INFO */}
           <div className="max-w-[460px] space-y-8">
             {/* Logo */}
@@ -44,10 +43,9 @@ export default function Contact() {
 
             {/* Description */}
             <p className="text-gray-300 leading-relaxed">
-              I am professional Web designer. I have designed more than 50 web
-              templates for my clients. You can hire me for design your personal,
-              business or other website template. You can trust me. I completed
-              your work with full satisfaction.
+              I am professional Web designer. I have designed more than 50 web templates for my
+              clients. You can hire me for design your personal, business or other website template.
+              You can trust me. I completed your work with full satisfaction.
             </p>
 
             <div className="h-[65px]" />
@@ -60,8 +58,8 @@ export default function Contact() {
                   src={icon.src}
                   alt={icon.alt}
                   className="w-6 h-6 object-contain"
-                  />
-                ))}
+                />
+              ))}
             </div>
           </div>
 
@@ -78,7 +76,6 @@ export default function Contact() {
 function ContactForm() {
   return (
     <form className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
-
       <Input placeholder="First Name" />
       <Input placeholder="Last Name" />
 

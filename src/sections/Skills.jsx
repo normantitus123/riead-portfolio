@@ -4,18 +4,18 @@ import SkillTag from "../components/SkillTag";
 
 export default function Skills() {
   const leftSkills = [
-  { name: "HTML-5", percent: 90, iconSrc: "/icons/Ellipse 3.png" },
-  { name: "Tailwind CSS", percent: 80, iconSrc: "/icons/Ellipse 3-2.png" },
-  { name: "React", percent: 60, iconSrc: "/icons/Ellipse 3-3.png" },
-  { name: "Adobe Photoshop", percent: 85, iconSrc: "/icons/Ellipse 3-4.png" },
-];
+    { name: "HTML-5", percent: 90, iconSrc: "/icons/Ellipse 3.png" },
+    { name: "Tailwind CSS", percent: 80, iconSrc: "/icons/Ellipse 3-2.png" },
+    { name: "React", percent: 60, iconSrc: "/icons/Ellipse 3-3.png" },
+    { name: "Adobe Photoshop", percent: 85, iconSrc: "/icons/Ellipse 3-4.png" },
+  ];
 
-const rightSkills = [
-  { name: "CSS-3", percent: 80, iconSrc: "/icons/Ellipse 3-1.png" },
-  { name: "JavaScript", percent: 60, iconSrc: "/icons/Ellipse 3-5.png" },
-  { name: "Figma", percent: 90, iconSrc: "/icons/Ellipse 3-6.png" },
-  { name: "Adobe Illustrator", percent: 90, iconSrc: "/icons/Ellipse 3-7.png" },
-];
+  const rightSkills = [
+    { name: "CSS-3", percent: 80, iconSrc: "/icons/Ellipse 3-1.png" },
+    { name: "JavaScript", percent: 60, iconSrc: "/icons/Ellipse 3-5.png" },
+    { name: "Figma", percent: 90, iconSrc: "/icons/Ellipse 3-6.png" },
+    { name: "Adobe Illustrator", percent: 90, iconSrc: "/icons/Ellipse 3-7.png" },
+  ];
 
   return (
     <section

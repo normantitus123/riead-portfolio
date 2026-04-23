@@ -54,11 +54,11 @@ The site will reload automatically when you edit files (Hot Module Reload).
 Copy code
 
 src/
-├── components/     # Reusable UI components
-├── sections/       # Page sections (Home, About, Skills, etc.)
-├── assets/         # Images & static files
-├── index.css       # Global styles (Tailwind)
-├── main.jsx        # App entry point
+├── components/ # Reusable UI components
+├── sections/ # Page sections (Home, About, Skills, etc.)
+├── assets/ # Images & static files
+├── index.css # Global styles (Tailwind)
+├── main.jsx # App entry point
 
 🧹 Optional Commands
 Build for production:

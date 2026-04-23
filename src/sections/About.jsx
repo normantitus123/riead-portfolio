@@ -40,7 +40,7 @@ export default function About() {
         <div className="grid grid-cols-1 items-start gap-[8px] md:grid-cols-[320px_120px_752px]">
           <AboutCard />
           <div className="hidden md:block" />
-          <AboutDetails educationItems={educationItems} />          
+          <AboutDetails educationItems={educationItems} />
         </div>
       </SectionLayout>
     </section>
@@ -77,40 +77,40 @@ function AboutCard() {
 function AboutDetails({ educationItems }) {
   return (
     <div className="max-w-[752px] pt-[16px]">
-            <div className="mb-[24px] flex flex-wrap items-center gap-x-[20px] gap-y-[12px] md:flex-nowrap">
-              <button className="relative flex w-[268px] items-center justify-center px-[10px] text-center text-[20px] leading-[36px] font-bold text-[#00EEFF]">
-                Education Qualification
-                <span className="absolute -bottom-[6px] left-1/2 h-[2px] w-[244px] -translate-x-1/2 bg-[#00EEFF]" />
-              </button>
+      <div className="mb-[24px] flex flex-wrap items-center gap-x-[20px] gap-y-[12px] md:flex-nowrap">
+        <button className="relative flex w-[268px] items-center justify-center px-[10px] text-center text-[20px] leading-[36px] font-bold text-[#00EEFF]">
+          Education Qualification
+          <span className="absolute -bottom-[6px] left-1/2 h-[2px] w-[244px] -translate-x-1/2 bg-[#00EEFF]" />
+        </button>
 
-              <button className="w-[137px] text-center text-[20px] leading-[36px] font-bold text-white">
-                Short Course
-              </button>
+        <button className="w-[137px] text-center text-[20px] leading-[36px] font-bold text-white">
+          Short Course
+        </button>
 
-              <button className="w-[137px] text-center text-[20px] leading-[36px] font-bold text-white">
-                Experience
-              </button>
+        <button className="w-[137px] text-center text-[20px] leading-[36px] font-bold text-white">
+          Experience
+        </button>
 
-              <button className="w-[137px] text-center text-[20px] leading-[36px] font-bold text-white">
-                Details
-              </button>
-            </div>
-            <div className="h-18" />
-            <div className="flex flex-col gap-[20px]">
-              {educationItems.map((item) => (
-                <div key={item.title} className="min-h-[74px]">
-                  <h4 className="text-[16px] leading-[24px] font-semibold text-[#00EEFF]">
-                    {item.title}
-                  </h4>
+        <button className="w-[137px] text-center text-[20px] leading-[36px] font-bold text-white">
+          Details
+        </button>
+      </div>
+      <div className="h-18" />
+      <div className="flex flex-col gap-[20px]">
+        {educationItems.map((item) => (
+          <div key={item.title} className="min-h-[74px]">
+            <h4 className="text-[16px] leading-[24px] font-semibold text-[#00EEFF]">
+              {item.title}
+            </h4>
 
-                  <div className="mt-[2px] space-y-[1px] text-[13px] leading-[18px] text-white">
-                    <p>Institute : {item.institute}</p>
-                    <p>Session : {item.session}</p>
-                    <p>Result : {item.result}</p>
-                  </div>
-                </div>
-              ))}
+            <div className="mt-[2px] space-y-[1px] text-[13px] leading-[18px] text-white">
+              <p>Institute : {item.institute}</p>
+              <p>Session : {item.session}</p>
+              <p>Result : {item.result}</p>
             </div>
           </div>
+        ))}
+      </div>
+    </div>
   );
 }

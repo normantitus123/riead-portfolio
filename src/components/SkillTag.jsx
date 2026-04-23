@@ -6,11 +6,7 @@ export default function SkillTag({ iconSrc, name, percent }) {
           className="w-[84px] h-[84px] rounded-full  border-white
                      flex items-center justify-center bg-[#1f242d] shrink-0"
         >
-          <img
-            src={iconSrc}
-            alt={name}
-            className="w-[84px] h-[84px] object-contain"
-          />
+          <img src={iconSrc} alt={name} className="w-[84px] h-[84px] object-contain" />
         </div>
 
         <div className="flex-1">
@@ -24,7 +20,6 @@ export default function SkillTag({ iconSrc, name, percent }) {
               className="absolute left-0 top-0 h-full rounded-full"
               style={{ width: `${percent}%`, backgroundColor: "#00EEFF" }}
             />
-
           </div>
         </div>
       </div>

@@ -1,9 +1,5 @@
 function SectionTitle({ children }) {
-  return (
-    <h2 className="text-[36px] leading-[44px] font-bold text-center">
-      {children}
-    </h2>
-  );
+  return <h2 className="text-[36px] leading-[44px] font-bold text-center">{children}</h2>;
 }
 export default function SectionHeader({ title, highlight }) {
   return (

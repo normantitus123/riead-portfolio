@@ -83,34 +83,28 @@ function ServiceCard({ service }) {
     >
       <div className="h-full grid justify-items-center gap-y-[18px]">
         <div className="h-[32px]" />
-          <div className="w-[94px] h-[94px]">
-           <Icon className="w-full h-full text-[#00EEFF]" strokeWidth={1.8} />
-         </div>
+        <div className="w-[94px] h-[94px]">
+          <Icon className="w-full h-full text-[#00EEFF]" strokeWidth={1.8} />
+        </div>
 
-         <h3 className="text-[21px] leading-[28px] font-semibold text-white">
-           {service.title}
-         </h3>
+        <h3 className="text-[21px] leading-[28px] font-semibold text-white">{service.title}</h3>
 
-         <p className="max-w-[260px] text-[14px] leading-[22px] font-normal text-slate-300">
-           {service.description}
-         </p>
+        <p className="max-w-[260px] text-[14px] leading-[22px] font-normal text-slate-300">
+          {service.description}
+        </p>
 
-          <div className="mt-auto pt-[14px]">
-            <button
-              className={`
+        <div className="mt-auto pt-[14px]">
+          <button
+            className={`
                 w-[288px] h-[35px]
                 rounded-[20px]
                 text-[16px] font-bold
                 flex items-center justify-center
-                ${
-                  isActive
-                    ? "bg-[#00EEFF] text-[#323946]"
-                    : "bg-white text-[#323946]"
-                }
+                ${isActive ? "bg-[#00EEFF] text-[#323946]" : "bg-white text-[#323946]"}
               `}
-            >
-              Hire Me
-            </button>
+          >
+            Hire Me
+          </button>
         </div>
       </div>
     </div>
